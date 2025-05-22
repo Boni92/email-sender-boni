@@ -3,7 +3,7 @@
 // import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 // import { createClient } from "jsr:@supabase/supabase-js@2";
 
-import "https://deno.land/std@0.224.0/dotenv/load.ts";
+// import "https://deno.land/std@0.224.0/dotenv/load.ts";
 
 // 🔐 Validación de entorno
 const STRIPE_SECRET_KEY = Deno.env.get("STRIPE_SECRET_KEY");
