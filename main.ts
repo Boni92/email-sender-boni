@@ -11,8 +11,17 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 const SENDGRID_API_KEY = Deno.env.get("SENDGRID_API_KEY");
 
-if (!STRIPE_SECRET_KEY || !SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !SENDGRID_API_KEY) {
-  throw new Error("❌ Variables de entorno faltantes en Deno Deploy");
+if (!STRIPE_SECRET_KEY) {
+  throw new Error("❌ Falta STRIPE_SECRET_KEY en las variables de entorno de Deno Deploy");
+}
+if (!SUPABASE_URL) {
+  throw new Error("❌ Falta SUPABASE_URL en las variables de entorno de Deno Deploy");
+}
+if (!SUPABASE_SERVICE_ROLE_KEY) {
+  throw new Error("❌ Falta SUPABASE_SERVICE_ROLE_KEY en las variables de entorno de Deno Deploy");
+}
+if (!SENDGRID_API_KEY) {
+  throw new Error("❌ Falta SENDGRID_API_KEY en las variables de entorno de Deno Deploy");
 }
 
 const PDF_BUCKET = "downloads";
