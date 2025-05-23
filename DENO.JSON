@@ -1,5 +1,5 @@
 {
-  "importMap": "./import_map.json",
+  "entrypoint": "main.ts",
   "deno.enable": true,
   "deno.lint": true,
   "deno.unstable": false
